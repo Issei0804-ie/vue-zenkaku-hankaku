@@ -1,9 +1,14 @@
 <script setup lang="ts">
-import helloworld from "vue-zenkaku-hankaku";
+import {useZenkakuHankaku} from "vue-zenkaku-hankaku";
+const {rawText, convertedText, convert} = useZenkakuHankaku();
+
 </script>
 
 <template>
   <div>
-    <h1>{{ helloworld() }}</h1>
+    <p>rawText is {{rawText}}</p>
+    <p>convertedText is {{convertedText}}</p>
+    <input v-model="rawText" />
+    <button @click="convert">convert</button>
   </div>
 </template>
