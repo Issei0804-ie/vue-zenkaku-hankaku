@@ -1,0 +1,29 @@
+{
+  "name": "vue-zenkaku-hankaku",
+  "author": "issei",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Issei0804-ie/vue-zenkaku-hankaku.git"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "eslint": "^8.56.0",
+    "eslint-config-standard-with-typescript": "^43.0.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-vue": "^9.21.1",
+    "typescript": "^5.3.3",
+    "vue": "^3.4"
+  },
+  "keywords": [],
+  "license": "MIT"
+}
