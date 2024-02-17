@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {useZenkakuHankaku} from "vue-zenkaku-hankaku";
-const {rawText, convertedText, convert} = useZenkakuHankaku();
+const {rawText, convertedText } = useZenkakuHankaku();
 
 </script>
 
@@ -9,6 +9,5 @@ const {rawText, convertedText, convert} = useZenkakuHankaku();
     <p>rawText is {{rawText}}</p>
     <p>convertedText is {{convertedText}}</p>
     <input v-model="rawText" />
-    <button @click="convert">convert</button>
   </div>
 </template>
