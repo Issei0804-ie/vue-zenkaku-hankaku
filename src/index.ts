@@ -1,8 +1,8 @@
-import { ref, watch } from 'vue'
+import { type DeepReadonly, readonly, type Ref, ref, type UnwrapRef, watch } from 'vue'
 
 interface TextConversionState {
-  rawText: string | undefined
-  convertedText: string | undefined
+  rawText: Ref<UnwrapRef<string>>
+  convertedText: DeepReadonly<Ref<UnwrapRef<string>>>
 }
 export const useZenkakuHankaku = (): TextConversionState => {
   const rawText = ref<string>('')
@@ -14,8 +14,8 @@ export const useZenkakuHankaku = (): TextConversionState => {
   }
   watch(rawText, convert)
   return {
-    rawText: rawText.value,
-    convertedText: convertedText.value
+    rawText,
+    convertedText: readonly(convertedText)
   }
 }
 
@@ -29,7 +29,7 @@ export const useHankakuZenkaku = (): TextConversionState => {
   }
   watch(rawText, convert)
   return {
-    rawText: rawText.value,
-    convertedText: convertedText.value
+    rawText,
+    convertedText: readonly(convertedText)
   }
 }
